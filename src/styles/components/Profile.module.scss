@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 3px solid var(--gray);
+
+    & > img {
+        width: 100px;
+    }
+
+    .info {
+        margin-left: 1.5rem;
+        width: 100%;
+
+        & > p {
+            color: var(--title);
+            font-weight: 600;
+            font-size: 1.3rem;
+            word-wrap: break-word;
+            display: block;
+            max-width: 210px;
+        }
+
+        & > span {
+            color: var(--textColor);
+            font-weight: 500;
+        }
+
+        button {
+            float: right;
+            border: none;
+            background: transparent;
+            font-family: Poppins;
+            cursor: pointer;
+
+            svg {
+                fill: var(--textColor);
+                width: 30px;
+                height: 30px;
+                transition: filter 200ms ease, transform 800ms ease-in-out;
+            }
+
+            &:hover > svg {
+                filter: brightness(1.5);
+                transform: rotateZ(360deg);
+            }
+        }
+
+        button:focus {
+            outline: none;
+        }
+    }
+}
